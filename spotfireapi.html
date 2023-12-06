@@ -1,0 +1,35 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://omn-qabi-forvia.ewqims.com:9010/spotfire/wp/GetJavaScriptApi.ashx?Version=11.4"></script>
+
+  <script>
+    var c_serverUrl = "https://omn-qabi-forvia.ewqims.com:9010/spotfire/wp/";
+    var c_analysisPath = "/EwIMSReports/AuditPro/VDA_3P_New&configurationBlock=AuditID=31423;AuditOrderid=1;";
+    var c_parameters = "";
+    var customization = new spotfire.webPlayer.Customization();
+    var app;
+    var c_reloadAnalysisInstance = false;
+
+    window.onload = function() {
+      app = new spotfire.webPlayer.Application(c_serverUrl, customization, c_analysisPath, c_parameters, c_reloadAnalysisInstance);
+	   var customization = new spotfire.webPlayer.Customization();
+       customization.showCustomizableHeader = false;
+	  <!-- spotfire.webPlayer.Customization = function( -->
+      <!-- customization.showStatusBar = true; -->
+      <!-- customization.showToolBar = false; -->
+      <!-- customization.showPageNavigation = false; -->
+      <!-- customization.showFilterPanel = false; -->
+      <!-- customization.showDodPanel = false; -->
+      <!-- customization.showAnalysisInfo = false; -->
+      <!-- customization.showExportFile = false; -->
+      <!-- customization.showExportVisualization = false; -->
+      <!-- customization.showUndoRedo = false; -->
+      <!-- customization.showFilterPanel = false;); -->
+      var viewone = app.openDocument("demoViz", "PDCA Result", customization);
+    }
+  </script>
+</head>
+<body>
+  <div id="demoViz"></div>
+</body>
+</html>
